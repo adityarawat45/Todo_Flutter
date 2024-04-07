@@ -18,29 +18,27 @@ class DialogBox extends StatelessWidget {
       backgroundColor: Vx.purple300,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       content: Container(
-          width: BouncingScrollSimulation.maxSpringTransferVelocity,
-          // height: 120,
-          // height: double.minPositive,
-          height: 140,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              TextField(
-                controller: controller,
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(), hintText: 'Add a new task'),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Button(text: "Add", bColor: Vx.green600, onPressed: onSaved)
-                      .pOnly(top: 15),
-                  Button(text: "Cancel", bColor: Vx.red500, onPressed: onCancel)
-                      .pOnly(top: 15)
-                ],
-              )
-            ],
-          ).p4()),
+        height: 140,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            TextField(
+              controller: controller,
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(), hintText: 'Add a new task'),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Button(text: "Add", bColor: Vx.green600, onPressed: onSaved)
+                    .pOnly(top: 15),
+                Button(text: "Cancel", bColor: Vx.red500, onPressed: onCancel)
+                    .pOnly(top: 15)
+              ],
+            )
+          ],
+        ).p4(),
+      ),
     );
   }
 }
